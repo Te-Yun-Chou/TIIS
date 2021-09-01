@@ -1,0 +1,44 @@
+<HTML>
+
+<HEAD>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <TITLE>�ͬ���</TITLE>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" background="images/bg7.jpg">
+  <p><img src="images/title7.jpg" width="555" height="102"></p>
+  <div id="Layer1" style="position:absolute; width:200px; height:115px; z-index:1"><img " src=" images/Right7.jpg"
+      width="555" height="539"></div>
+  <img style="position:absolute; left:200px; top:850px; z-index:2 filter=alpha(opacity=0);background-color=FFFFFF;"
+    onload='javascript:if(this.height>450) this.height=450' name="dynamicpic" src=""></div>
+
+  <div id="Layer2" style="position:absolute; left:316px; top:299px; width:172px; height:87px; z-index:2">
+    <div>
+      <img width="360" height="300" src="/SimpleViewer/images/00.JPG">
+    </div>
+    <div>
+      <img width="360" height="300" src="/SimpleViewer/images/01.JPG">
+    </div>
+    <div>
+      <img width="360" height="300" src="/SimpleViewer/images/02.JPG">
+    </div>
+  </div>
+</BODY>
+
+<script>
+  $(document).ready(function(){
+    $("#Layer2 > div:gt(0)").hide();
+    setInterval(function () {
+      $('#Layer2 > div:first')
+        .hide()
+        .next()
+        .show()
+        .end()
+        .appendTo('#Layer2');
+    }, 3000);
+  })
+</script>
+
+</HTML>

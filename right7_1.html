@@ -1,0 +1,121 @@
+<HTML>
+<HEAD>
+<TITLE>生活照</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/jquery.galleryview-3.0-dev.js"></script>
+<script src="js/jquery.timers-1.2.js"></script>  
+<link href="css/jquery.galleryview-3.0-dev.css" rel="stylesheet" />
+
+
+
+
+<script language="javascript1.3">
+displayimage=new Image();
+displayimage.src="images/bg7black.bmp";
+bufferimage=new Image();
+bufferimage.src="images/bg7black.bmp";
+
+$(function(){
+		$('#myGallery').galleryView({
+			panel_width: 800,
+			panel_height: 450,
+			panel_scale: "fit"
+
+		});
+	});
+	
+var position1=200;
+var position2=200;
+var i=-1;
+var str="";
+var picamount=30;
+
+var vari=5;
+var alpha=-5;
+var j=0;
+var delaytime=100;
+var standarwidth=300;
+var j=0;
+var valign=0;
+var switched=0;
+<!--
+/*function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function changepic(){
+   
+   i++;   
+   str=(i%30).toString();
+   if(parseInt(str)<10)
+     str="0"+str;
+   str="marriage20071002/"+str+".bmp";
+   bufferimage.src=str;
+}
+
+function stylechang1(){
+  position1+=3;
+  document.images["dynamicpicA"].style.top=position1;
+  if(position1>1250){
+     position1=200;
+     if(bufferimage.width<601)
+        document.images["dynamicpicA"].style.left=325+50;
+     else
+        document.images["dynamicpicA"].style.left=62+50;
+
+     document.images["dynamicpicA"].src=bufferimage.src;
+     changepic();
+  }
+
+  if(position1>725 || switched){
+     switched=1;
+     position2+=3;
+     document.images["dynamicpicB"].style.top=position2;
+     if(position2>1250){
+        position2=200;
+        if(bufferimage.width<601)
+           document.images["dynamicpicB"].style.left=175+50;
+        else
+           document.images["dynamicpicB"].style.left=62+50;
+
+        document.images["dynamicpicB"].src=bufferimage.src;
+        switched=1;
+        changepic();
+     }
+  }  
+}
+function preload(){
+  changepic();
+  document.images["dynamicpicA"].src=bufferimage.src;
+  changepic();
+  document.images["dynamicpicB"].src=bufferimage.src;
+  changepic();
+}*/
+//setInterval(stylechang1,20);
+// -->
+</script>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" background="images/bg7.jpg">
+<p><img src="images/title7.jpg" width="555" height="102"></p>
+<div id="Layer1" style="position:absolute; width:200px; height:115px; z-index:5"><img " src="images/Right7.jpg" width="555" height="539"></div>
+<div id="Layer4" style="position:absolute; left:50px; top:654px;width:115px; height:115px; z-index:0">
+<iframe frameborder="0" src="./SimpleViewer/index.html" width="740" height="555" scrolling="AUTO"></iframe>
+</div>
+<div id="Layer5" style="position:absolute; left:0px; top:102px;width:115px; height:115px; z-index:4"><img  onload='javascript:if(this.width>1000)this.width=1000' src="images/bg7pictureground.bmp"></div>
+<div id="Layer6" style="position:absolute; left:0px; top:1250px;width:115px; height:115px; z-index:5"><img  onload='javascript:if(this.width>1000)this.width=1000' src="images/bg7pictureground.bmp"></div>
+<div id="Layer7" style="position:absolute; left:87px; top:1250px;width:258px; height:115px; z-index:7"></div>
+<div id="Layer2" style="position:absolute; left:316px; top:299px; width:172px; height:87px; z-index:6">
+    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="360" height="300">
+    <param name=movie value="image_lab.swf">
+    <param name=quality value=high>
+    <PARAM NAME=wmode VALUE=transparent>
+    <embed src="image_lab.swf" quality=high wmode=transparent pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="360" height="300">
+    </embed>
+  </object> 
+</div>
+</BODY>
+</HTML>
